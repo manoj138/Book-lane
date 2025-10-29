@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookLane - Buy, Sell, and Discover Books</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="scroll-smooth">
+  <!-- main Wrapper -->
+  <div>
+    <!-- navigation section -->
+    <section class="fixed top-0 left-0 right-0  w-full z-100">
+      <nav class="mx-auto px-6 py-4 max-w-[1300px]">
+        <div class="bg-white/5 backdrop-blur-sm py-2 rounded-xl border border-white/10">
+          <div class="flex justify-between items-center px-5">
+            <!-- Logo -->
+            <a href="">
+              <img src="./assets/logo.png" alt="Logo" class="max-h-13">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-8 items-center text-white font-semibold ">
+              <a href="#home" class="hover:text-blue-500">Home</a>
+              <a href="#features" class="hover:text-blue-500">Features</a>
+              <a href="#how-it-works" class="hover:text-blue-500">How it Works</a>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded">
+                <a href="https://play.google.com/store/apps/details?id=com.cloud_regex.book_lane"
+                  target="_blank">Download App</a>
+              </button>
+            </div>
+
+            <!-- mobile view -->
+            <div class="md:hidden">
+
+              <input type="checkbox" id="menu-toggle" class="hidden peer">
+              <label for="menu-toggle" class="cursor-pointer text-white">
+
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </label>
+            </div>
+          </div>
+
+          <!-- Mobile view Menu -->
+          <div class="peer-checked:flex hidden flex-col gap-2 mt-2 text-white font-semibold md:hidden">
+            <a href="#home" class="hover:text-blue-500">Home</a>
+            <a href="#features" class="hover:text-blue-500">Features</a>
+            <a href="#how-it-works" class="hover:text-blue-500">How it Works</a>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded w-full">
+              <a href="https://play.google.com/store/apps/details?id=com.cloud_regex.book_lane" target="_blank">Download
+                App</a>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Home Section -->
+    <section class="py-30 bg-[#0A192F]" id="home">
+      <div class="mx-auto px-8 py-4 max-w-[1200px]">
+        <div class="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-50 ">
+
+          <!-- Left Content -->
+          <div class="w-full lg:max-w-[70%] flex flex-col gap-4 text-center lg:text-left">
+            <h2
+              class="font-extrabold text-4xl sm:text-5xl lg:text-6xl bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
+              <span class="text-white">Discover</span> books & study materials on Booklane.</h2>
+            <p class="text-xl sm:text-2xl text-white mt-5">Buy, sell, textbooks and rare editions with the students.
+              Built it for students and booklovers.</p>
+
+            <div
+              class="bg-slate-800/70 backdrop-blur-lg mt-5 flex justify-center items-center gap-2 w-60 mx-auto lg:mx-0 p-2 rounded-xl border-1 border-white/20 cursor-pointer hover:bg-slate-800/20 transition duration-300 ">
+              <div><i class="fab fa-google-play text-white"></i></div>
+              <div class="text-white">
+                <a href="https://play.google.com/store/apps/details?id=com.cloud_regex.book_lane" target="_blank">
+                  <h2 class="font-semibold">Get it on Google Play</h2>
+                  <p>Available on Android</p>
+                </a>
+              </div>
+            </div>
+
+            <p class="text-lg sm:text-xl text-white mt-5">
+              <span class="font-bold">List in 30 seconds:</span> Photo upload, book info, instant listing.
+            </p>
+          </div>
+
+          <!-- Right Content -->
+          <div class="w-full lg:max-w-[30%] flex justify-center mt-8 lg:mt-0">
+
+            <div
+              class="bg-[#0A192F] border-9 border-gray-500 rounded-4xl w-full max-w-[320px] relative h-[600px] z-10 overflow-hidden">
+
+              <!-- Mobile Heading -->
+              <div class="flex justify-between rounded-2xl bg-[#0A192F] w-full p-2 absolute z-20 top-0">
+                <div>
+                  <h2 class="text-sm font-semibold text-white ">9:41</h2>
+                </div>
+                <div class="flex items-center space-x-1.5">
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M5.5 14.5a3.5 3.5 0 01-3.5-3.5C2 9.873 2.873 9 4 9h12c1.127 0 2 .873 2 2.5a3.5 3.5 0 01-3.5 3.5h-7zM5 11.5a1.5 1.5 0 00-1.5 1.5A1.5 1.5 0 005 14.5h10a1.5 1.5 0 001.5-1.5A1.5 1.5 0 0015 11.5H5z">
+                    </path>
+                  </svg>
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.5 5.5a2.5 2.5 0 00-5 0V7h5V5.5zM20 7V5.5A4.5 4.5 0 0011 5.5V7H2v11h18V7h-2z"></path>
+                  </svg>
+                  <span class="text-sm font-semibold text-white">100%</span>
+                </div>
+              </div>
+
+              <!-- Mobile Cards -->
+              <div class="flex flex-col  gap-3 px-4 pt-20 pb-16 h-full roller-div ">
+                <!-- Repeatable Card -->
+                <div
+                  class="flex justify-center items-center bg-white/10 backdrop-blur-lg p-3 rounded-xl gap-3 border-1 border-white/20 ">
+                  <div class="bg-white/20 backdrop-blur-lg p-3 px-6 py-8 rounded "><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-book-half"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783">
+                      </path>
+                    </svg></div>
+                  <div class="w-50">
+                    <h2 class="text-white text-sm font-bold">A brief history of time</h2>
+                    <p class="text-green-300 text-sm font-bold">₹ 399.00</p>
+                  </div>
+                </div>
+
+
+
+
+
+                <!-- Repeatable Card 1-->
+                <div
+                  class="flex justify-center items-center bg-white/10 backdrop-blur-lg p-3 rounded-xl gap-3 border-1 border-white/20 ">
+                  <div class="bg-white/20 backdrop-blur-lg px-6 py-8 rounded"><svg xmlns="http://www.w3.org/2000/svg"
+                      width="16" height="16" fill="#fff" class="bi bi-book-half" viewBox="0 0 16 16">
+                      <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783">
+                      </path>
+                    </svg></div>
+                  <div class="w-50">
+                    <h2 class="text-white text-sm font-bold">Too good to be true</h2>
+                    <p class="text-green-300 text-sm font-bold">₹ 399.00</p>
+                  </div>
+                </div>
+
+
+
+                <!-- Repeatable Card 2-->
+                <div
+                  class="flex justify-center items-center bg-white/10 backdrop-blur-lg p-3 rounded-xl gap-3 border-1 border-white/20 ">
+                  <div class="bg-white/20 backdrop-blur-lg px-6 py-8 rounded"><svg xmlns="http://www.w3.org/2000/svg"
+                      width="16" height="16" fill="#fff" class="bi bi-book-half" viewBox="0 0 16 16">
+                      <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783">
+                      </path>
+                    </svg></div>
+                  <div class="w-50">
+                    <h2 class="text-white text-sm font-bold">The psychology of money</h2>
+                    <p class="text-green-300 text-sm font-bold">₹ 399.00</p>
+                  </div>
+                </div>
+
+
+
+                <!-- Repeatable Card 3-->
+                <div
+                  class="flex justify-center items-center bg-white/10 backdrop-blur-lg p-3 rounded-xl gap-3 border-1 border-white/20 ">
+                  <div class="bg-white/20 backdrop-blur-lg px-6 py-8 rounded"><svg xmlns="http://www.w3.org/2000/svg"
+                      width="16" height="16" fill="#fff" class="bi bi-book-half" viewBox="0 0 16 16">
+                      <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783">
+                      </path>
+                    </svg></div>
+                  <div class="w-50">
+                    <h2 class="text-white text-sm font-bold">Rich dad poor dad</h2>
+                    <p class="text-green-300 text-sm font-bold">₹ 499.00</p>
+                  </div>
+                </div>
+
+                <!-- Repeatable Card 4-->
+                <div
+                  class="flex justify-center items-center bg-white/10 backdrop-blur-lg p-3 rounded-xl gap-3 border-1 border-white/20 ">
+                  <div class="bg-white/20 backdrop-blur-lg px-6 py-8 rounded"><svg xmlns="http://www.w3.org/2000/svg"
+                      width="16" height="16" fill="#fff" class="bi bi-book-half" viewBox="0 0 16 16">
+                      <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783">
+                      </path>
+                    </svg></div>
+                  <div class="w-50">
+                    <h2 class="text-white text-sm font-bold">Unlocking the universe</h2>
+                    <p class="text-green-300 text-sm font-bold">₹ 1200.00</p>
+                  </div>
+                </div>
+
+
+
+
+                <!-- Repeatable Card 5-->
+                <div
+                  class="flex justify-center items-center bg-white/10 backdrop-blur-lg p-3 rounded-xl gap-3 border-1 border-white/20 ">
+                  <div class="bg-white/20 backdrop-blur-lg px-6 py-8 rounded"><svg xmlns="http://www.w3.org/2000/svg"
+                      width="16" height="16" fill="#fff" class="bi bi-book-half" viewBox="0 0 16 16">
+                      <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783">
+                      </path>
+                    </svg></div>
+                  <div class="w-50">
+                    <h2 class="text-white text-sm font-bold">Thank you for leaving</h2>
+                    <p class="text-green-300 text-sm font-bold">₹ 299.00</p>
+                  </div>
+                </div>
+
+
+                <!-- Repeatable Card 6-->
+                <div
+                  class="flex justify-center items-center bg-white/10 backdrop-blur-lg p-3 rounded-xl gap-3 border-1 border-white/20 ">
+                  <div class="bg-white/20 backdrop-blur-lg px-6 py-8 rounded"><svg xmlns="http://www.w3.org/2000/svg"
+                      width="16" height="16" fill="#fff" class="bi bi-book-half" viewBox="0 0 16 16">
+                      <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783">
+                      </path>
+                    </svg></div>
+                  <div class="w-50">
+                    <h2 class="text-white text-sm font-bold"> Atomic habits</h2>
+                    <p class="text-green-300 text-sm font-bold">₹ 799.00</p>
+                  </div>
+                </div>
+
+
+                <!-- Repeatable Card 7-->
+                <div
+                  class="flex justify-center items-center bg-white/10 backdrop-blur-lg p-3 rounded-xl gap-3 border-1 border-white/20 ">
+                  <div class="bg-white/20 backdrop-blur-lg px-6 py-8 rounded"><svg xmlns="http://www.w3.org/2000/svg"
+                      width="16" height="16" fill="#fff" class="bi bi-book-half" viewBox="0 0 16 16">
+                      <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783">
+                      </path>
+                    </svg></div>
+                  <div class="w-50">
+                    <h2 class="text-white text-sm font-bold">The subtle art of not giving a f*ck</h2>
+                    <p class="text-green-300 text-sm font-bold">₹ 499.00</p>
+                  </div>
+                </div>
+
+                <!-- Repeatable Card 8-->
+                <div
+                  class="flex justify-center items-center bg-white/10 backdrop-blur-lg p-3 rounded-xl gap-3 border-1 border-white/20 ">
+                  <div class="bg-white/20 backdrop-blur-lg px-6 py-8 rounded"><svg xmlns="http://www.w3.org/2000/svg"
+                      width="16" height="16" fill="#fff" class="bi bi-book-half" viewBox="0 0 16 16">
+                      <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783">
+                      </path>
+                    </svg></div>
+                  <div class="w-50">
+                    <h2 class="text-white text-sm font-bold"> The theory of everything</h2>
+                    <p class="text-green-300 text-sm font-bold">₹ 199.00</p>
+                  </div>
+                </div>
+
+                <!-- Repeatable Card 9-->
+                <div
+                  class="flex justify-center items-center bg-white/10 backdrop-blur-lg p-3 rounded-xl gap-3 border-1 border-white/20 ">
+                  <div class="bg-white/20 backdrop-blur-lg px-6 py-8 rounded"><svg xmlns="http://www.w3.org/2000/svg"
+                      width="16" height="16" fill="#fff" class="bi bi-book-half" viewBox="0 0 16 16">
+                      <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783">
+                      </path>
+                    </svg></div>
+                  <div class="w-50">
+                    <h2 class="text-white text-sm font-bold">Mathematics textbook for class 9 ncrt</h2>
+                    <p class="text-green-300 text-sm font-bold">₹ 155.00</p>
+                  </div>
+                </div>
+
+
+
+
+
+              </div>
+              <!-- Mobile Footer -->
+              <div class="flex justify-center gap-20 rounded-2xl bg-[#0A192F] w-full p-2 absolute bottom-0 z-40">
+                <div><i class="fa-regular fa-square text-white"></i></div>
+                <div><i class="fa-regular fa-circle text-white"></i></div>
+                <div><i class="fa-solid fa-chevron-left text-white"></i></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+    <!-- second section -->
+
+    <section class="bg-[#050e1b] py-20" id="features">
+      <div class="mx-auto px-6 sm:px-8 max-w-[1200px]">
+        <div class="flex flex-col gap-5 text-center">
+          <h2
+            class="font-extrabold text-3xl sm:text-4xl lg:text-4xl bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
+            Powerful tools, simplified.
+          </h2>
+          <p class="text-gray-400 text-lg sm:text-lg">
+            BookLane is packed with features to make buying and selling books faster and more enjoyable than ever
+            before.
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 ">
+          <!-- Card 1 -->
+          <div
+            class="bg-white/10 backdrop-blur-lg flex flex-col items-center gap-4 p-6 rounded-xl border border-white/20 h-full transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-[0_0_50px_rgba(52,211,163,0.1)] ">
+
+            <div class="bg-emerald-400/10 backdrop-blur-lg p-5 rounded-xl text-2xl">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-8 h-8 text-sky-400">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.311a14.994 14.994 0 01-4.5 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold text-2xl">Instant Listing</h3>
+            <p class="text-gray-300 text-[1em] text-center">List a book in seconds — we’ll auto-fill all the details for
+              you.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white/10 backdrop-blur-lg text-center flex flex-col items-center gap-4 p-6 rounded-xl border border-white/20 h-full transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-[0_0_50px_rgba(52,211,163,0.1)] ">
+            <div class="bg-emerald-400/10 backdrop-blur-lg p-5 rounded-xl text-2xl">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-8 h-8 text-emerald-400">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-white  font-semibold text-2xl">Smart Search & Filters</h3>
+            <p class="text-gray-300 text-[1em] text-center">Quickly find exactly what you need with powerful search and
+              filters for category, condition, and price.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white/10 backdrop-blur-lg flex flex-col items-center gap-4 p-6 rounded-xl border border-white/20 h-full transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-[0_0_50px_rgba(52,211,163,0.1)] ">
+            <div class="bg-purple-400/10 backdrop-blur-lg p-5 rounded-xl text-2xl">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-8 h-8 text-purple-400">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286zm0 13.036h.008v.008h-.008v-.008z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold text-2xl">Safe Community</h3>
+            <p class="text-gray-300 text-[1em] text-center">Buy and sell with peace of mind — BookLane connects you with
+              genuine students in a trusted network.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white/10 backdrop-blur-lg text-center flex flex-col items-center gap-4 p-6 rounded-xl border border-white/20 h-full transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-[0_0_50px_rgba(52,211,163,0.1)]">
+            <div class="bg-rose-400/10 backdrop-blur-lg p-5 rounded-xl text-2xl">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-8 h-8 text-rose-400">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-white font-semibold text-2xl">Secure & Simple Sales</h3>
+            <p class="text-gray-300 text-[1em] text-center">Communicate with buyers and sellers through our secure
+              platform and arrange transactions with peace of mind.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- third section -->
+    <section class="py-25 bg-[#06101f]">
+      <div class="mx-auto px-6 sm:px-8 max-w-[1200px]">
+        <div class="flex flex-col gap-5 text-center">
+          <h2
+            class="font-extrabold text-3xl sm:text-4xl lg:text-4xl bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
+            Meet Our Brand Ambassador
+          </h2>
+          <p class="text-gray-400 text-lg sm:text-lg">
+            We are proud to introduce Om Salunkhe, our official Booklane Brand Ambassador.
+          </p>
+        </div>
+        <!-- box -->
+        <div
+          class="bg-white/10 backdrop-blur-lg flex flex-col md:flex-row justify-center items-center md:items-start gap-20 rounded-2xl p-8 border border-sky-500 w-full max-w-[1080px] mx-auto mt-10">
+
+          <!-- Left content -->
+          <div class="flex flex-col items-center text-center max-w-[250px]">
+            <img src="./assets/om.jpeg" alt="Om Salunkhe"
+              class="w-48 h-52 md:w-48 md:h-56 rounded-3xl shadow-lg border-2 border-sky-500 mb-2 object-cover">
+
+            <h2
+              class="font-extrabold text-3xl sm:text-4xl lg:text-xl bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
+              Om Salunkhe
+            </h2>
+
+            <p class="text-gray-400 text-lg sm:text-lg">SY.BCS</p>
+            <p class="text-gray-400 text-lg sm:text-lg">Vidya Pratishthan Baramati</p>
+          </div>
+
+
+          <!-- Right content -->
+          <div class="text-left md:text-left text-xl md:max-w-2xl text-gray-400 leading-relaxed">
+            <p class="mb-3">
+              Om Salunkhe is a passionate advocate for literacy and education, and a long-time user of Booklane. His
+              dedication to fostering a love for reading and making educational resources accessible aligns perfectly
+              with Booklane's mission. As our brand ambassador, Om Salunkhe embodies the spirit of our community and
+              helps us reach more students and booklovers, encouraging them to connect, share, and discover.
+            </p>
+            <p>
+              He actively participates in various literary events and promotes the benefits of Booklane through his
+              engaging presence and dedication. We are thrilled to have Om Salunkhe represent Booklane and inspire
+              others to join our growing network.
+            </p>
+          </div>
+
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- fourth section -->
+
+    <section class="bg-[#06101f] py-20" id="how-it-works">
+      <div class="mx-auto px-6 sm:px-8 max-w-[1200px] ">
+        <div class="flex flex-col gap-5 text-center">
+          <h2
+            class="font-extrabold text-3xl sm:text-4xl lg:text-4xl bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
+            Powerful tools, simplified.
+          </h2>
+          <p class="text-gray-400 text-lg sm:text-lg">
+            BookLane is packed with features to make buying and selling books faster and more enjoyable than ever
+            before.
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="w-full flex justify-center relative">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 justify-items-center z-10 ">
+
+            <!-- Card 1 -->
+            <div class="bg-white/10 backdrop-blur-lg flex flex-col items-center gap-4 p-6 rounded-xl border border-white/20 text-center  transform transition-transform duration-300 
+               hover:translate-y-3 ">
+              <div class="p-5 rounded-xl text-6xl">
+                <h2 class="font-bold text-gray-600">01</h2>
+              </div>
+              <h3 class="text-white font-semibold text-2xl">Find or Scan Book</h3>
+              <p class="text-gray-300 text-[1em] text-center">
+                Use our powerful search or simply scan the book's barcode to instantly find it in our database.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white/10 backdrop-blur-lg flex flex-col items-center gap-4 p-6 rounded-xl border border-white/20 text-center transform transition-transform duration-400 
+               hover:translate-y-5">
+              <div class="p-5 rounded-xl text-6xl">
+                <h2 class="font-bold text-gray-600">02</h2>
+              </div>
+              <h3 class="text-white font-semibold text-2xl">List in Seconds</h3>
+              <p class="text-gray-300 text-[1em] text-center">
+                Set the condition, name your price, and upload a photo. Your listing is live in under a minute.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white/10 backdrop-blur-lg flex flex-col items-center gap-4 p-6 rounded-xl border border-white/20 text-center transform transition-transform duration-300 
+               hover:translate-y-7 ">
+              <div class="p-5 rounded-xl text-6xl">
+                <h2 class="font-bold text-gray-600">03</h2>
+              </div>
+              <h3 class="text-white font-semibold text-2xl">Connect & Transact</h3>
+              <p class="text-gray-300 text-[1em] text-center">
+                Get contacted by interested buyers, finalize the deal, and easily complete your sale.
+              </p>
+            </div>
+
+          </div>
+          <div class="bg-gray-500 w-full px-10 py-[1px] absolute top-50 "></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- five Section -->
+
+    <section class="w-full bg-[#050e1b] py-20">
+      <div class="mx-auto px-6 py-4 max-w-[1300px]">
+        <div class="bg-gradient-to-r from-sky-500/10 to-emerald-500/10 backdrop-blur-lg p-2 rounded-xl">
+          <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center px-6 py-10 gap-8 lg:gap-10">
+            <!-- left content -->
+            <div class="max-w-full lg:max-w-[45%] flex flex-col gap-5">
+              <h2
+                class="font-bold text-3xl sm:text-4xl lg:text-4xl bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
+                Get started with BookLane today.
+              </h2>
+              <p class="text-gray-400 text-lg sm:text-lg">
+                Join a thriving community of readers and students. Download the app to start discovering, selling, and
+                sharing books in minutes.
+              </p>
+            </div>
+            <!-- right content -->
+            <div
+              class="bg-slate-800/70 backdrop-blur-lg flex justify-center items-center gap-2 w-60 mx-auto lg:mx-0 p-2 rounded-xl border-1 border-white/20 cursor-pointer hover:bg-slate-800/20 transition duration-300 ">
+              <div><i class="fab fa-google-play text-white"></i></div>
+              <div class="text-white">
+                <a href="https://play.google.com/store/apps/details?id=com.cloud_regex.book_lane" target="_blank">
+                  <h2 class="font-semibold">Get it on Google Play</h2>
+                  <p>Available on Android</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- six section -->
+    <section class="w-full bg-[#050e1b] py-20">
+      <div class="mx-auto px-6 py-4 max-w-[1300px]">
+        <div class="flex flex-col gap-5 text-center">
+          <h2
+            class="font-extrabold text-3xl sm:text-4xl lg:text-4xl bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-gray-400 text-lg sm:text-lg">
+            Have questions? We've got answers. If you can't find what you're looking for, feel free to contact us.
+          </p>
+        </div>
+
+        <!-- detail FAQ -->
+        <div class="max-w-4xl mx-auto p-4 text-white py-20">
+
+          <details open class="border-b border-gray-700/50 py-3">
+            <summary
+              class="text-lg sm:text-xl flex justify-between items-center w-full py-4 text-left font-semibold cursor-pointer list-none hover:text-sky-400 focus:outline-none">
+              Is BookLane free to use?
+              <i
+                class="fa-solid fa-chevron-down text-white transition-transform duration-300 group-open:rotate-180"></i>
+            </summary>
+            <div class="pb-4 pr-6 text-gray-300 text-base sm:text-lg">
+              <p>Yes, BookLane is completely free to download and use for listing, buying, and exchanging books. We
+                believe in making education accessible and affordable for everyone.</p>
+            </div>
+          </details>
+
+          <hr class="border-gray-700/50 ">
+
+          <details class="border-b border-gray-700/50 py-3">
+            <summary
+              class="text-lg sm:text-xl flex justify-between items-center w-full py-4 text-left font-semibold cursor-pointer list-none hover:text-sky-400 focus:outline-none">
+              What kind of books can I sell?
+              <i
+                class="fa-solid fa-chevron-down text-white transition-transform duration-300 group-open:rotate-180"></i>
+            </summary>
+            <div class="pb-4 pr-6 text-gray-300 text-base sm:text-lg">
+              <p>You can sell any kind of books on BookLane, including textbooks, novels, and non-fiction. Just make
+                sure the books are in good condition and comply with our guidelines.</p>
+            </div>
+          </details>
+
+          <hr class="border-gray-700/50">
+
+          <details class="border-b border-gray-700/50 py-3">
+            <summary
+              class="text-lg sm:text-xl flex justify-between items-center w-full py-4 text-left font-semibold cursor-pointer list-none hover:text-sky-400 focus:outline-none">
+              How do I get paid for a sale?
+              <i
+                class="fa-solid fa-chevron-down text-white transition-transform duration-300 group-open:rotate-180"></i>
+            </summary>
+            <div class="pb-4 pr-6 text-gray-300 text-base sm:text-lg">
+              <p>Once your book is sold, you will receive payment through your chosen payment method. We support various
+                payment options to make the process seamless for you.</p>
+            </div>
+          </details>
+
+          <hr class="border-gray-700/50">
+
+          <details class="border-b border-gray-700/50 py-5">
+            <summary
+              class="text-lg sm:text-xl flex justify-between items-center w-full py-4 text-left font-semibold cursor-pointer list-none hover:text-sky-400 focus:outline-none">
+              Is BookLane available on iOS?
+              <i
+                class="fa-solid fa-chevron-down text-white transition-transform duration-300 peer-checked:rotate-180"></i>
+            </summary>
+            <div class="pb-4 pr-6 text-gray-300 text-base sm:text-lg">
+              <p>Yes, BookLane is available on iOS devices. You can download it from the App Store and enjoy all the
+                features on your iPhone or iPad.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section class="py-10 bg-[#06101f]">
+      <div class="mx-auto px-6 py-4 max-w-[1300px]">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-10 max-w-[1200px] mx-auto">
+
+
+          <div class="sm:col-span-2 md:col-span-1">
+            <h2 class="text-white font-bold text-3xl">BookLane</h2>
+            <p class="text-gray-400 text-lg py-5">Share, sell, or donate educational materials effortlessly</p>
+          </div>
+
+
+          <div class="sm:col-span-2 md:col-span-3 grid grid-cols-2 lg:grid-cols-3 gap-5">
+
+            <div class="flex flex-col gap-2">
+              <h2 class="text-white font-bold text-xl">Platform</h2>
+              <a href="#home" class="text-gray-400 hover:text-sky-400 ">Home</a>
+              <a href="#features" class="text-gray-400 hover:text-sky-400">Features</a>
+              <a href="#how-it-works" class="text-gray-400 hover:text-sky-400">How it works</a>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <h2 class="text-white font-bold text-xl">Company</h2>
+              <a href="#about" class="text-gray-400 hover:text-sky-400">About Us</a>
+              <a href="./privacy.html" class="text-gray-400 hover:text-sky-400">Privacy Policy</a>
+              <a href="./term.html" class="text-gray-400 hover:text-sky-400">Terms of Service</a>
+            </div>
+
+
+            <div class="flex flex-col gap-2">
+              <h2 class="text-white font-bold text-xl">Contact</h2>
+              <a href="mailto:support@booklane.com" class="text-gray-400 hover:text-sky-400">support@booklane.com</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Separator and Copyright Section -->
+        <hr class="border-gray-700 mt-10">
+
+        <div class="text-center flex flex-col justify-center items-center gap-2 mt-5">
+          <p class="text-gray-400">© 2025 BookLane. All rights reserved.</p>
+          <p class="text-gray-400">Developed By <span class="text-sky-400 font-medium">CloudRegex Infotech Pvt
+              Ltd.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- main Wrapper div close -->
+  </div>
+</body>
+
+</html>

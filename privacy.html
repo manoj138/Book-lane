@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BookLane - Buy, Sell, and Discover Books</title>
+     <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- navigation section -->
+    <section class="fixed top-0 left-0 right-0  w-full z-100">
+        <nav class="mx-auto px-6 py-4 max-w-[1300px]">
+          <div class="bg-white/5 backdrop-blur-sm py-2 rounded-xl border border-white/10">
+          <div class="flex justify-between items-center px-5">
+                    <!-- Logo -->
+                    <a href="">
+                        <img src="./assets/logo.png" alt="Logo" class="max-h-13">
+                    </a>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex gap-8 items-center text-white font-semibold">
+                        <a href="./index.html" class="hover:text-blue-500">Home</a>
+                        <a href="#features" class="hover:text-blue-500">Features</a>
+                        <a href="#how-it-works" class="hover:text-blue-500">How it Works</a>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded">
+                            <a href="https://play.google.com/store/apps/details?id=com.cloud_regex.book_lane"
+                                target="_blank">Download App</a>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Hamburger -->
+                    <div class="md:hidden">
+                        <!-- Hidden checkbox to toggle menu -->
+                        <input type="checkbox" id="menu-toggle" class="hidden peer">
+                        <label for="menu-toggle" class="cursor-pointer text-white">
+                            <!-- Hamburger Icon -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div class="peer-checked:flex hidden flex-col gap-2 mt-2 text-white font-semibold md:hidden">
+                    <a href="#home" class="hover:text-blue-500">Home</a>
+                    <a href="#features" class="hover:text-blue-500">Features</a>
+                    <a href="#how-it-works" class="hover:text-blue-500">How it Works</a>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded w-full">
+                        <a href="https://play.google.com/store/apps/details?id=com.cloud_regex.book_lane"
+                            target="_blank">Download App</a>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- Privacy Policy Section -->
+    <section class="py-25 bg-[#090f18]" id="privacy">
+        <div class="mx-auto px-8 py-4 max-w-[1080px]">
+            <div class="flex flex-col justify-center items-center text-center ">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-400 mb-6">Privacy Policy & Terms of Service
+                </h2>
+                <p class=" text-gray-500 font-medium md:text-xl mb-6">Last updated: February 24, 2025</p>
+            </div>
+            <div class="flex justify-center flex-col mx-auto max-w-[900px]  mb-12">
+
+                <div class="flex flex-col gap-1">
+                    <h2 class="md:text-3xl text-2xl font-bold text-gray-400 mb-6">1. Introduction</h2>
+                    <p class="text-gray-500 font-medium md:text-xl mb-6">Welcome to BookLane. We are committed to
+                        protecting
+                        your personal information and your right to privacy. If you have any questions or concerns about
+                        our
+                        policy, or our practices with regards to your personal information, please contact us.</p>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                    <h2 class="md:text-3xl text-2xl font-bold text-gray-400 mb-6">2. Account Creation & Google Login
+                    </h2>
+                    <p class="text-gray-500 font-medium md:text-xl mb-6">We use Google Sign-In as our sole
+                        authentication method to provide a secure and streamlined user experience. By creating an
+                        account, you agree to:</p>
+                    <ul class="text-gray-500 font-medium md:text-xl mb-6 list-disc flex flex-col gap-1">
+                        <li>Provide accurate and complete information as prompted by the Google Sign-In process.</li>
+                        <li>Maintain the security of your account credentials and be responsible for all activities that
+                            occur under your account.</li>
+                        <li>Comply with Google's Terms of Service and Privacy Policy, in addition to these terms.</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                    <h2 class="md:text-3xl text-2xl font-bold text-gray-400 mb-6">3. Information We Collect</h2>
+                    <p class="text-gray-500 font-medium md:text-xl mb-6">When you register on BookLane using Google
+                        Sign-In, we collect the following personal information from your Google account:</p>
+                    <ul class="text-gray-500 font-medium md:text-xl mb-6 list-disc flex flex-col gap-1">
+                        <li>Your full name</li>
+                        <li>Your primary email address</li>
+                        <li>Your profile picture (if publicly available)</li>
+                    </ul>
+                    <p class="text-gray-500 font-medium md:text-xl mb-6">This information is used solely for account
+                        management, personalization, and to facilitate communication within the app.</p>
+
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h2 class="md:text-3xl text-2xl font-bold text-gray-400 mb-6">4. User Responsibilities</h2>
+                    <p class="text-gray-500 font-medium md:text-xl mb-6">As a user of BookLane, you agree to:</p>
+                    <ul class="text-gray-500 font-medium md:text-xl mb-6 list-disc flex flex-col gap-1">
+                        <li>Use the service only for lawful purposes and in accordance with these terms.</li>
+                        <li>Provide accurate information for any books you list for exchange or sale.</li>
+                        <li>Not engage in any fraudulent, malicious, or harassing activities.</li>
+                        <li>Respect the intellectual property rights of others.</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-1">
+                    <h2 class="md:text-3xl text-2xl font-bold text-gray-400 mb-6">5. Data Security</h2>
+                    <p class="text-gray-500 font-medium md:text-xl mb-6">We have implemented appropriate technical and
+                        organizational security measures designed to protect the security of any personal information we
+                        process. However, please also remember that we cannot guarantee that the internet itself is 100%
+                        secure.</p>
+
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h2 class="md:text-3xl text-2xl font-bold text-gray-400 mb-6">6. Termination</h2>
+                    <p class="text-gray-500 font-medium md:text-xl mb-6">We reserve the right to suspend or terminate
+                        your account at any time, without notice, for conduct that we believe violates these Terms or is
+                        harmful to other users of BookLane, us, or third parties, or for any other reason.</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h2 class="md:text-3xl text-2xl font-bold text-gray-400 mb-6">7. Changes to Terms</h2>
+                    <p class="text-gray-500 font-medium md:text-xl mb-6">We may modify these Terms at any time. We will
+                        notify you of any changes by updating the "Last updated" date of these Terms and, if the changes
+                        are significant, we will provide a more prominent notice.</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h2 class="md:text-3xl text-2xl font-bold text-gray-400 mb-6">8. Contact Us</h2>
+                    <p class="text-gray-500 font-medium md:text-xl mb-6">If you have questions or comments about these
+                        Terms or our Privacy Policy, you may contact us at: <a
+                            class="text-blue-500 hover:underline ">privacy@booklane.com</a></p>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- footer -->
+    <section class="py-5 bg-[#06101f]">
+        <div class="mx-auto px-6 py-4 max-w-[1300px]">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-10 max-w-[1200px] mx-auto">
+
+
+                <div class="sm:col-span-2 md:col-span-1">
+                    <h2 class="text-white font-bold text-3xl">BookLane</h2>
+                    <p class="text-gray-400 text-lg py-5">Share, sell, or donate educational materials effortlessly</p>
+                </div>
+
+
+                <div class="sm:col-span-2 md:col-span-3 grid grid-cols-2 lg:grid-cols-3 gap-5">
+
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-white font-bold text-xl">Platform</h2>
+                        <a href="#home" class="text-gray-400 hover:text-sky-400 ">Home</a>
+                        <a href="#features" class="text-gray-400 hover:text-sky-400">Features</a>
+                        <a href="#how-it-works" class="text-gray-400 hover:text-sky-400">How it works</a>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-white font-bold text-xl">Company</h2>
+                        <a href="#about" class="text-gray-400 hover:text-sky-400">About Us</a>
+                        <a href="./privacy.html" class="text-gray-400 hover:text-sky-400">Privacy Policy</a>
+                        <a href="./term.html" class="text-gray-400 hover:text-sky-400">Terms of Service</a>
+                    </div>
+
+
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-white font-bold text-xl">Contact</h2>
+                        <a href="mailto:support@booklane.com"
+                            class="text-gray-400 hover:text-sky-400">support@booklane.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Separator and Copyright Section -->
+            <hr class="border-gray-700 mt-10">
+
+            <div class="text-center flex flex-col justify-center items-center gap-2 mt-5">
+                <p class="text-gray-400">© 2025 BookLane. All rights reserved.</p>
+                <p class="text-gray-400">Developed By <span class="text-sky-400 font-medium">CloudRegex Infotech Pvt
+                        Ltd.</span></p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

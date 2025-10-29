@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+.roller-div{
+  
+animation: roller;
+animation-duration: 20s;
+animation-timing-function: linear;
+animation-iteration-count:infinite;
+    
+}
+@keyframes roller{
+   0%{
+    transform: translateY(0);
+   }
+   100%{
+    transform: translatey(-100%);
+   }
+
+}
+
